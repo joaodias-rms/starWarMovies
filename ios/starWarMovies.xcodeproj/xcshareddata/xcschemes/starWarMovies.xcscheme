@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "starWarMovies.app"
-               BlueprintName = "starWarMovies"
-               ReferencedContainer = "container:starWarMovies.xcodeproj">
+               BuildableName = "starWarsMovies.app"
+               BlueprintName = "starWarsMovies"
+               ReferencedContainer = "container:starWarsMovies.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "starWarMoviesTests.xctest"
-               BlueprintName = "starWarMoviesTests"
-               ReferencedContainer = "container:starWarMovies.xcodeproj">
+               BuildableName = "starWarsMoviesTests.xctest"
+               BlueprintName = "starWarsMoviesTests"
+               ReferencedContainer = "container:starWarsMovies.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "starWarMovies.app"
-            BlueprintName = "starWarMovies"
-            ReferencedContainer = "container:starWarMovies.xcodeproj">
+            BuildableName = "starWarsMovies.app"
+            BlueprintName = "starWarsMovies"
+            ReferencedContainer = "container:starWarsMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "starWarMovies.app"
-            BlueprintName = "starWarMovies"
-            ReferencedContainer = "container:starWarMovies.xcodeproj">
+            BuildableName = "starWarsMovies.app"
+            BlueprintName = "starWarsMovies"
+            ReferencedContainer = "container:starWarsMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
