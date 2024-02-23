@@ -53,6 +53,7 @@ const Home: React.FC = () => {
 
   const [appSettings, setAppSetings] = useState('');
   const [hideLoading, setHideLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const screenHeight = Dimensions.get(`window`).height;
 
@@ -69,8 +70,8 @@ const Home: React.FC = () => {
   });
 
   const login = (data: FormData) => {
+    setLoading(true);
     signIn({email: data.email, password: data.password});
-    console.log(data);
   };
 
   async function deviceSettings() {
@@ -99,42 +100,42 @@ const Home: React.FC = () => {
 
   return (
     <Background>
-      <KeyboardAvoidingView behavior="height">
-        <TouchableOpacity onPress={Keyboard.dismiss} activeOpacity={1}>
-          {!hideLoading && (
-            <>
-              <LoadingIcon
-                size={100}
-                strokeWidth={8}
-                baseColor={theme.colors.blue._500}
-                animating={true}
-                duration={1000}
+      {!hideLoading ? (
+        <>
+          <LoadingIcon
+            size={100}
+            strokeWidth={8}
+            baseColor={theme.colors.blue._500}
+            animating={true}
+            duration={1000}
+          />
+          <DeviceData>{appSettings}</DeviceData>
+        </>
+      ) : (
+        <KeyboardAvoidingView behavior="height">
+          <TouchableOpacity onPress={Keyboard.dismiss} activeOpacity={1}>
+            <LoginFormContainer
+              style={{
+                transform: [{translateY: constainerLoginTranslate}],
+              }}>
+              <Input
+                control={control}
+                name="email"
+                title="Email"
+                error={errors.email}
               />
-              <DeviceData>{appSettings}</DeviceData>
-            </>
-          )}
-
-          <LoginFormContainer
-            style={{
-              transform: [{translateY: constainerLoginTranslate}],
-            }}>
-            <Input
-              control={control}
-              name="email"
-              title="Email"
-              error={errors.email}
-            />
-            <Input
-              control={control}
-              name="password"
-              title="Senha"
-              error={errors.password}
-              secureTextEntry
-            />
-            <LargeButton loading={false} onPress={handleSubmit(login)} />
-          </LoginFormContainer>
-        </TouchableOpacity>
-      </KeyboardAvoidingView>
+              <Input
+                control={control}
+                name="password"
+                title="Senha"
+                error={errors.password}
+                secureTextEntry
+              />
+              <LargeButton loading={loading} onPress={handleSubmit(login)} />
+            </LoginFormContainer>
+          </TouchableOpacity>
+        </KeyboardAvoidingView>
+      )}
     </Background>
   );
 };
