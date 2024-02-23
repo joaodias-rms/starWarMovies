@@ -4,11 +4,14 @@ import {ThemeProvider} from 'styled-components';
 import {Routes} from './src/routes';
 import theme from './src/theme';
 import {AuthProvider} from './src/hooks/auth';
+import {MovieProvider} from './src/hooks/movies';
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <AuthProvider>
-        <Routes />
+        <MovieProvider>
+          <Routes />
+        </MovieProvider>
       </AuthProvider>
     </ThemeProvider>
   );
