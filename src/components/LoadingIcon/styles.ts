@@ -5,7 +5,7 @@ export const LoadingContainer = styled.View`
   height: 100px;
   align-self: center;
   align-items: center;
-  margin-bottom: 150px;
+  margin-bottom: 305px;
 `;
 export const LoadingText = styled.Text`
   font-size: 12px;
