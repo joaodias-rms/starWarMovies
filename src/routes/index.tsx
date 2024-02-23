@@ -10,7 +10,7 @@ export function Routes() {
 
   return (
     <NavigationContainer>
-      {signed ? <AuthRoutes /> : <TabRoutes />}
+      {signed ? <TabRoutes /> : <AuthRoutes />}
     </NavigationContainer>
   );
 }
